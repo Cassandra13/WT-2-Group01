@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Homepage of Group 01</title>
+	</head>
+	<style>
+	body{
+	padding: 0;
+	margin: 0;
+}
+.navbar{
+	position: fixed;
+	height: 80px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.4);
+}
+.navbar ul{
+	float: right;
+	margin-right: 20px;
+}
+.navbar ul li{
+	list-style: none;
+	margin: 0 8px;
+	display: inline-block;
+	line-height: 80px;
+}
+.navbar ul li a{
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+	color: white;
+	padding: 6px 13px;
+	text-decoration: none;
+	transition: .4s;
+}
+.navbar ul li a.active,
+.navbar ul li a:hover{
+	background: red;
+	border-radius: 2px;
+	</style>
+<body>
+	<div class="wrapper">
+			<nav class="navbar">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">People</a></li>
+					<li><a href="#">Blogs</a></li>
+					<li><a href="#">Feedback</a></li>
+				</ul>
+			</nav>
+		</div>
+		</div>
+</body>
+</html>
