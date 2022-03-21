@@ -1,66 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title> Our Homepage </title>
-    </head>
-<style>
-
-body {
-    padding: 0;
-    background-color: forestgreen;
-    margin:100px;
-    font-family: arial;
+<head>
+	<meta charset="UTF-8">
+	<title>Group 01</title>
+	</head>
+	<style>
+	body{
+	padding: 0;
+	margin: 0;
 }
-
-.logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.navbar{
+	position: fixed;
+	height: 80px;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background: rgba(0,0,0,0.4);
 }
-
 .navbar ul{
-  list-style: none;
-  background-color: white;
-  padding: 0;;
-  margin:0;
-  text-align: center;
+	float: right;
+	margin-right: 20px;
 }
-
-.navbar li{
-   display: inline-block;
+.navbar ul li{
+	list-style: none;
+	margin: 0 8px;
+	display: inline-block;
+	line-height: 80px;
 }
-
-.navbar a {
-  float: left;
-  display: block;
-  color: black;
-  text-align: center;
-  padding: 20px 30px;
-  text-decoration: none;
-  font-size: 20px;
-  margin: 0px auto;
-  font-weight: bold;
-  text-transforma: uppercase;
-  width: 100px;
+.navbar ul li a{
+	font-size: 20px;
+	font-family: 'Roboto', sans-serif;
+	color: white;
+	padding: 6px 13px;
+	text-decoration: none;
+	transition: .4s;
 }
-
-.navbar a:hover {
-  background: #f1f1f1;
-  color: black;
-}
-
-</style>
-
+.navbar ul li a.active,
+.navbar ul li a:hover{
+	background: red;
+	border-radius: 2px;
+	</style>
 <body>
-        <div class="logo"><a href="#"><img src ="1.png"></a> </div>
-     
-<div class="navbar">
-<ul>
-  <li><a href="#">Home</a></li>
-  <li><a href="#">People</a></li>
-  <li><a href="#">Blogs</a></li>
-  <li><a href="#">Contact</a></li>
-</ul>
-</div>
+	<div class="wrapper">
+			<nav class="navbar">
+				<ul>
+					<li><a href="#">Home</a></li>
+					<li><a href="#">People</a></li>
+					<li><a href="#">Blogs</a></li>
+					<li><a href="#">Feedback</a></li>
+				</ul>
+			</nav>
+		</div>
+		</div>
 </body>
 </html>
