@@ -1,1 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>GroupOne</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href=
+"https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"integrity= "sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"crossorigin="anonymous">
 
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+
+<!-- PEOPLE -->
+
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+body{
+    font-family: Helvetica;
+    -webkit-font-smoothing: antialiased;
+    background: black;
+}
+h2{
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: white;
+    padding: 30px 0;
+}
+
+/* Table Styles */
+
+.table-wrapper{
+    margin: 10px 70px 70px;
+    box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
+}
+
+.fl-table {
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: normal;
+    border: none;
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 100%;
+    white-space: nowrap;
+    background-color: white;
+}
+
+.fl-table td, .fl-table th {
+    text-align: center;
+    padding: 8px;
+}
+
+.fl-table td {
+    border-right: 1px solid #f8f8f8;
+    font-size: 12px;
+}
+
+.fl-table thead th {
+    color: #ffffff;
+    background: #4FC3A1;
+}
+
+
+.fl-table thead th:nth-child(odd) {
+    color: #ffffff;
+    background: #324960;
+}
+
+.fl-table tr:nth-child(even) {
+    background: #F8F8F8;
+}
+
+/* Responsive */
+
+@media (max-width: 767px) {
+    .fl-table {
+        display: block;
+        width: 100%;
+    }
+    .table-wrapper:before{
+        content: "Scroll horizontally >";
+        display: block;
+        text-align: right;
+        font-size: 11px;
+        color: white;
+        padding: 0 0 10px;
+    }
+    .fl-table thead, .fl-table tbody, .fl-table thead th {
+        display: block;
+    }
+    .fl-table thead th:last-child{
+        border-bottom: none;
+    }
+    .fl-table thead {
+        float: left;
+    }
+    .fl-table tbody {
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+    }
+    .fl-table td, .fl-table th {
+        padding: 20px .625em .625em .625em;
+        height: 60px;
+        vertical-align: middle;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        overflow-y: auto;
+        width: 120px;
+        font-size: 13px;
+        text-overflow: ellipsis;
+    }
+    .fl-table thead th {
+        text-align: left;
+        border-bottom: 1px solid #f7f7f9;
+    }
+    .fl-table tbody tr {
+        display: table-cell;
+    }
+    .fl-table tbody tr:nth-child(odd) {
+        background: none;
+    }
+    .fl-table tr:nth-child(even) {
+        background: transparent;
+    }
+    .fl-table tr td:nth-child(odd) {
+        background: #F8F8F8;
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tr td:nth-child(even) {
+        border-right: 1px solid #E6E4E4;
+    }
+    .fl-table tbody td {
+        display: block;
+        text-align: center;
+    }
+}
+
+</style>
+
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-black w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">HOME</a>
+    <a href="#people" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PEOPLE</a>
+    <a href="#blog" class="w3-bar-item w3-button w3-padding-large w3-hide-small">BLOGS</a>
+    <a href="#team" class="w3-bar-item w3-button w3-padding-large w3-hide-small">TEAM</a>
+   
+    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+  </div>
+</div>
+
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#people" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">PEOPLE</a>
+  <a href="#blog" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">BLOGS</a>
+  <a href="#team" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">TEAM</a>
+</div>
+
+<!-- HOME -->
+
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+
+  <div class="mySlides w3-display-container w3-center">
+    <img src="images/ank.gif" style="width:100%">
+    <div class="w3-display-bottommiddle w3-container w3-text-white w3-padding-32 w3-hide-small">
+      <h3>WELCOME TO NEW WORLD</h3>
+      <p><b>We are from Group One</b></p>   
+    </div>
+  </div>
+
+<!-- PEOPLE -->
+
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:1500px" id="people">
+
+<h2>Student Profile</h2>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+            <th>Student Number</th>
+            <th>Student Name</th>
+            <th>Birthday</th>
+            <th>Email Address</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>20134544</td>
+            <td>ABAYARE, mariel J</td>
+            <td>March 18, 2002</td>
+            <td>abayaremariel_act@plmun.edu.ph</td>
+        </tr>
+
+        <tr>
+            <td>20134041</td>
+            <td>ABDULLAH, norhanah B</td>
+            <td>October 28, 2001</td>
+            <td>abdullahnorhanah_act@plum.edu.ph</td>
+            
+        </tr>
+
+        <tr>
+            <td>20133796</td>
+            <td>ABRIOL, cole andrew C</td>
+            <td>April 15, 2000</td>
+            <td>abriolcoleandrew_act@plmun.edu.ph</td>
+            
+        </tr>
+
+        <tr>
+            <td>20134563</td>
+            <td>ARAGO, john henry</td>
+            <td>September 16, 1999</td>
+            <td>aragojohnhenry_act@plmun.edu.ph</td>
+           
+        </tr>
+
+        <tr>
+                <td>20134459</td>
+                <td>BROQUEZA, joan B</td>
+                <td>October 30, 2001</td>
+                <td>broquezajoan_act@plmun.edu.ph</td>
+            </tr>
+            <tr>
+                <td>20134890</td>
+                <td>CATALAN, ariane R</td>
+                <td>November 22, 2000</td>
+                <td>catalanariane_act@plmun.edu.ph</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>DELA CRUZ, mark joseph C</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>18122898</td>
+                <td>DOLLETON, moises</td>
+                <td>June 9, 1999</td>
+                <td>dolletonmoises_act@plmun.edu.ph</td>
+            </tr>
+            <tr>
+                <td>20134891</td>
+                <td>DOROTAN, joshua</td>
+                <td>March 22, 1999</td>
+                <td>dorotanjoshua_act@plmun.edu.ph</td>
+            </tr>
+            <tr>
+                <td>20134985</td>
+                <td>ERO, patrick andrei P</td>
+                <td>July 13, 2002</td>
+                <td>eropatrick_act@plmun.edu.ph</td>
+            </tr>
+            <tr>
+                <td>20134009</td>
+                <td>GA-AS, joebert P</td>
+                <td>October 23,2000</td>
+                <td>gaasjoebert_act@plmun.edu.ph</td>
+            </tr>
+            <tr>
+                <td>20133817</td>
+                <td>HERNANDEZ, jaydellane C</td>
+                <td>July 27, 2001</td>
+                <td>hernandezjaydellane_act@plmun.edu.ph</td>
+           </tr>
+            <tr>
+                <td>20134397</td>
+                <td>JIMENEZ, elijah joshua O</td>
+                <td>june 23, 1998</td>
+                <td>jimenezelijahjoshua_act@plmun.edu.ph</td>
+            </tr>
+            <tr>
+                <td>20134516</td>
+                <td>LAJUM, keneth</td>
+                <td>June 19, 2001</td>
+                <td>lajumkenneth_act@plmun.edu.ph</td>
+            </tr>
+            <tr>
+                <td>20133785</td>
+                <td>LAUSA, kevin son G</td>
+                <td>August 08, 2001</td>
+                <td>lausakevinson_act@plmun.edu.ph</td>
+            </tr>
+            <tr>
+                <td>20134515</td>
+                <td>LEGO, inah mae</td>
+                <td>March 18, 2002</td>
+                <td>legoinahmae_act@plmun.edu.ph</td>
+            </tr>
+            <tr>
+                <td>20134481</td>
+                <td>LEMETARES, audrey</td>
+                <td>October, 25,2000</td>
+                <td>lemetaresaudreyrose_act@plmun.edu.ph</td>
+            </tr>
+            <tr>
+                <td>20133624</td>
+                <td>LUKBAN, michael joshua anthony</td>
+                <td>January 23, 2001</td>
+                <td>lukbanmichaeljoshuaanthony_act@plmun.edu.ph</td>
+            </tr>
+            <tr>
+                <td>20133912</td>
+                <td>MARCOS, dj claire</td>
+                <td>December 15,2000</td>
+                <td>marcosdjclaire_act@plmun.edu.ph</td>
+            </tr>
+            <tr>
+                <td>20134013</td>
+                <td>MARQUEZ, cassandra baysa</td>
+                <td>April 13, 2002</td>
+                <td>3 marquezcassandra_act@plmun.edu.ph</td>
+            </tr>
+            <tr>
+                <td>20134730</td>
+                <td>MILLA, norefe</td>
+                <td>February 27, 2002</td>
+                <td>millanorefe_act@plmun.edu.ph</td>
+            </tr>
+            <tr>
+                <td>20133953</td>
+                <td>NOSOTROS, mark daryl</td>
+                <td>December 04, 2001</td>
+                <td>nosotrosmarkdaryl_act@plmun.edu.ph</td>
+           </tr>
+            <tr>
+                <td>20134616</td>
+                <td>POJAS, merille joy P</td>
+                <td>February 3 2002</td>
+                <td>pojasmerille_act@plmun.edu.ph</td>
+           </tr>
+            <tr>
+                <td>20134078</td>
+                <td>REYES, jhoyce myka B</td>
+                <td>September 1, 2002</td>
+                <td>reyesjhoyce_act@plmun.edu.ph</td>
+            </tr>
+            <tr>
+                <td>20133790</td>
+                <td>SALES, jyrone resty B</td>
+                <td>June 22, 2002</td>
+                <td>salesjyrone_act@plmun.edu.ph</td>
+            </tr>
+            <tr>
+                <td>20133769</td>
+                <td>SAMULDE, raminie F</td>
+                <td>November 17, 2000</td>
+                <td>samulderaminie_act@plmun.edu.ph</td>
+            </tr>
+            <tr>
+                <td>20134080</td>
+                <td>SANTOS, mara clariza R</td>
+                <td>September 30 1998</td>
+                <td>santosmaraclariza_act@plmun.edu.ph</td>
+            </tr>
+            <tr>
+                <td>20134311</td>
+                <td>SANTUA, paul</td>
+                <td>April 21, 2001</td>
+                <td>santuapaul_act@plmun.edu.ph</td>
+            </tr>
+            <tr>
+                <td>20135130</td>
+                <td>SEREDNICA, jefferson S</td>
+                <td>October 05, 2001</td>
+                <td>seredricajefferson_act@plmun.edu.ph</td>
+            </tr>
+            <tr>
+                <td>20134494</td>
+                <td>SIRIOS, bobby vincent P. III</td>
+                <td>April 29, 2001</td>
+                <td>siriosbobbyvincentiii_act@plmun.edu.ph</td>
+            </tr>
+            <tr>
+                <td>20134260</td>
+                <td>SOBERANO, jika</td>
+                <td>June 14, 2001</td>
+                <td>soberanojika_act@plmun.edu.ph</td>
+            </tr>
+            <tr>
+                <td>20133772</td>
+                <td>SUCGANG, richard</td>
+                <td>October 23, 1999</td>
+                <td>sucgangrichard_act@plmun.edu.ph</td>
+            </tr>
+            <tr>
+                <td>20134212</td>
+                <td>TARNATE, sheena mae M</td>
+                <td>June 20, 2000</td>
+                <td>tarnatesheenamae_act@plmun.edu.ph</td>
+            </tr>
+            <tr>
+                <td>20134341</td>
+                <td>TORRIGOZA, angel</td>
+                <td>November 1,2000</td>
+                <td>torrigozaangel_act@plmun.edu.ph</td>
+            </tr>
+        <tbody>
+    </table>
+</div>
+
+<!-- BLOGS -->
+
+  <div class="w3-black" id="blog">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:1200px">
+      <h2 class="w3-wide w3-center">Latest Blogs</h2>      
+
+      <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <img src="images/css.png" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>CSS Font-Family Property</b></p>
+            <p class="w3-opacity">Jin Vincent Necesario, Aug 10, 2021</p>
+            <p>Within CSS, the font-family property is used to specify the font of a text. Otherwise, browsers will display text using its default font. When you assign or specify fonts, it's important to remember that users are unlikely to have the same fonts installed on your computer. If you have defined a font that the user doesn't have, your text will display according to the browser's default fonts, regardless of what you'd prefer.</p>
+<a href="https://www.c-sharpcorner.com/blogs/css-fontfamily-property"> CSS Font-Family Property </a>            
+          </div>
+        </div>
+
+        <div class="w3-third w3-margin-bottom">
+          <img src="images/java.jpeg" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>JavaScript - Input Field Enable And Disable</b></p>
+            <p class="w3-opacity">Sangeetha S, March 16, 2022</p>
+            <p>An HTML input field can be disabled and enabled based on purpose. Here I will discuss enabling and disabling the input fields using JavaScript. For example, consider one login page after entering username, password input tag need to be enabled. Using JavaScript keyup function while entering a value on input field, we can enable another input tag. Similarly, submit button enable and disable are also achieved.</p>
+<a href="https://www.c-sharpcorner.com/article/javascript-input-field-enable-and-disable/"> JavaScript - Input Field Enable And Disable</a>             
+          </div>
+        </div>
+
+        <div class="w3-third w3-margin-bottom">
+          <img src="images/blo.png" alt="San Francisco" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>FullStack - How to create a working blogging website with pure HTML, CSS and JS in 2021.</b></p>
+            <p class="w3-opacity">Modern Web, Aug 13 2021</p>
+            <p>Hello, Today we'll see, how we can easily create a blogging website using HTML, CSS and JS only. No other library. We'll also use Firebase firestore to store/retrieve blog data.This is a very good project to practice full-stack development. When I started with web development I always thought how can I make my own blogging website. </p>
+<a href="https://dev.to/kunaal438/fullstack-how-to-create-a-working-blogging-website-with-pure-html-css-and-js-in-2021-9di"> FullStack - How to create a working blogging website with pure HTML, CSS and JS in 2021.</a>              
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- TEAM -->
+
+  <div class="w3-container w3-content w3-padding-64" style="max-width:850px" id="team">
+    <h2 class="w3-wide w3-center">MEMBERS</h2>
+   <div class="w3-row-padding w3-padding-32" style="margin:0 -16px">
+        <div class="w3-third w3-margin-bottom">
+          <img src="images/cass.jpg" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>MARQUEZ, CASSANDRA</b></p>
+            <p class="w3-opacity">Leader</p>      
+          </div>
+        </div>
+      
+        <div class="w3-third w3-margin-bottom">
+          <img src="images/josh.jpg" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>DOROTAN, JOSHUA</b></p>
+            <p class="w3-opacity">Member</p>       
+          </div>
+        </div>
+
+       <div class="w3-third w3-margin-bottom">
+          <img src="images/babi.jpg" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>SIRIOS, BOBBY VINCENT P. III</b></p>
+            <p class="w3-opacity">Member</p>       
+          </div>
+        </div>
+
+      <div class="w3-third w3-margin-bottom">
+          <img src="images/angel.jpg" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>TORRIGOZA, ANGEL MAE</b></p>
+            <p class="w3-opacity">Member</p>       
+          </div>
+        </div>
+
+     <div class="w3-third w3-margin-bottom">
+          <img src="images/merille.jpg" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>MERILLE JOY P. POJAS</b></p>
+            <p class="w3-opacity">Member</p>       
+          </div>
+        </div>
+
+     <div class="w3-third w3-margin-bottom">
+          <img src="images/charles.jpg" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>NAGANO, CHARLES ROVIC JR.</b></p>
+            <p class="w3-opacity">Member</p>       
+          </div>
+        </div>
+
+    <div class="w3-third w3-margin-bottom">
+          <img src="images/jrone.jpg" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>SALES, JYRONE</b></p>
+            <p class="w3-opacity">Member</p>         
+          </div>
+        </div>
+
+      </div>
+    </div>
+  
+<!-- End Page Content -->
+</div>
+
+<!-- Image of location/map -->
+<img src="images/free.gif" class="w3-image w3-greyscale-min" style="width:100%">
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  <i class="fa fa-instagram w3-hover-opacity"></i>
+  <i class="fa fa-snapchat w3-hover-opacity"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+  <i class="fa fa-twitter w3-hover-opacity"></i>
+  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  <p class="w3-medium">Created by GroupOne</a></p>
+</footer>
+
+<script>
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 4000);    
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// When the user clicks anywhere outside of the modal, close it
+var modal = document.getElementById('ticketModal');
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
